@@ -1,0 +1,389 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    height: 100%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5f5f5;
+    height: 100%;
+    flex: 1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(200, 200, 200);
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.header{
+    border-bottom: none;
+    width: 100%
+} 
+
+/* NAVBAR SECTION */
+.navbar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 0rem;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.navbar-item {
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+}
+
+/* FOLD OUT MENU */
+.nav-menu {
+    position: fixed;
+    left: 0; /* Starts from the very left */
+    top: 9rem;
+    flex-direction: column;
+    background-color: transparent; /* Makes it transparent, so no 'white tab' appearance */
+    width: 0%; /* Starts with a width of 0 */
+    border-radius: 2px;
+    text-align: left;
+    font-size: 3rem;
+    transition: 0.3s;
+    overflow: hidden; /* Ensures that the contents are hidden when the menu is collapsed */
+}
+
+.nav-menu.active {
+    left: 4rem;
+    width: 40%; /* When active, it expands to full width */
+    background-color: white;
+    color: none;
+}
+
+.nav-item {
+    margin: 2.5rem 0;
+}
+/* END OF FOLD OUT MENU SECTION */
+
+.uchrp-logo {
+    max-width: 20rem;
+    max-height: 10rem;
+}
+
+/* NARCAN BUTTON SECTION */
+.narcan-button {
+    padding: 2rem 2rem;
+    background-color: #E95858;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;    
+    margin-right: 2.5rem;
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+.narcan-button:hover {
+    background-color:  rgb(164, 54, 54);
+    transform: scale(1.05);
+}
+
+.narcan-button:active {
+    transform: scale(0.95);
+}
+
+.selected-nav-link{
+    color: black;
+}
+.nav-link{
+    color: gray;
+}
+/* END OF NARCAN BUTTON SECTION */
+
+/* HAMBURGER MENU && ANIMATION */ 
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* END OF BURGER SECTION */
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* END OF NAVBAR SECTION */
+
+/* MAIN SECTION OF HOME PAGE */
+
+/* INTRO PART */
+
+
+main {
+    display: flex;
+    margin-top: 11.5rem;
+    text-decoration: none;
+    align-items: center;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    flex: 1
+}
+
+.facts-text{
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 1.5rem 20rem;
+    text-align: center;
+}
+
+.intro-uchrp {
+    display: flex;
+    justify-content: space-between; /* Space out the children */
+    background-color: #E95858;
+}
+
+.image-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.uchrp-intro-img {
+    padding: 1rem 1rem;
+    max-width: 100%;
+    max-height: 100%
+}
+.intro-text {
+    flex: 1;  /* Take up 50% of the width */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+    flex-direction: column;
+    color: white;
+    padding: 2rem 2rem
+}
+
+.header-uchrp {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.explain-text {
+    padding-top: 1rem;
+    font-size: 20px;
+}
+/* END OF INTRO PART */
+
+/* OD FACTS PART */
+.overdose-info{
+    display: flex;
+    justify-content: space-between; /* Space out the children */
+    margin-top: 5rem;
+}
+.info{
+    padding: 2rem 2rem;
+    width: 30%;
+    background-color: black;
+    color: white
+}
+
+.info-header {
+    font-size: 20px;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    max-width: 100%;
+}
+
+.info-image{
+    max-width: 100%;
+    max-height: 30;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.info-text{
+    text-align: left;
+    font-size: 16px;
+}
+
+.hr-button-container{
+    margin-top: 7rem;
+}
+
+.big-text {
+    font-size: 26px
+}
+
+.pretty-button {
+    padding: 2rem 3rem;
+    background-color: #E95858;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.3s;    
+    font-weight: bold;
+    box-shadow: 14px 14px 0px black;
+}
+
+.pretty-button:hover {
+    background-color:  rgb(164, 54, 54);
+    transform: scale(1.05);
+}
+
+.pretty-butto:active {
+    transform: scale(0.95);
+}
+
+.big-line {
+    width: 100%;             /* Make it span across the whole screen */
+    height: 5px;             /* Adjust thickness as you like */
+    background-color: #333; 
+    border: none;  
+    margin-top:7rem;   
+}
+
+.funding-container{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 5rem;   
+    padding: 1rem 2rem;
+    justify-content: space-between;
+}
+
+/* WHAT IS HARM REDUCTION PAGE */
+
+
+.hr-info-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 2.5rem;
+    color: black;
+    border-radius: 10px;
+}
+
+.hr-info-half {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.learn-more-button-container {
+    margin-top: 2.5em;
+}
+
+.principles-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hr-info-header {
+    font-size: 28px;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+
+}
+
+.hr-info-text {
+    font-size: 18px;
+    margin-bottom: 1.5em;
+}
+
+/* NARCAN NEAR YOU PAGE */
+
+.header-container {
+    display: flex;
+    width: 100%;
+    padding: 2rem 4rem;
+    color: white;
+    background-color: rgb(73, 73, 73);
+}
+.header-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.info-container{
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 2rem;
+    color: rgb(73,73,73);
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* CONNECT PAGE */
+.contact-us-button-container{
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+/* WHAT WE DO PAGE */
+.stats-container {
+    margin-top: 1.5em;
+    background-color: #E95858;
+    font-size: 24px;
+    padding: 1em 1em;
+    width: 100%;
+    color: white
+}
